@@ -59,3 +59,52 @@ Note the order of the  editors names does not matter;
 ]
 ```
 Your API should be able to be run and tested by CVS Team with our own bearer token.
+
+## Setup
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Create a `.env` file in the root directory and add your TMDB API key:
+```
+TMDB_API_KEY=your_bearer_token_here
+```
+
+To get a TMDB API key:
+1. Create an account at [TMDB](https://www.themoviedb.org/)
+2. Go to your account settings
+3. Navigate to the API section
+4. Request an API key
+5. Once approved, use the Bearer token provided in your `.env` file
+
+
+
+## Running the Application
+
+Development mode:
+```bash
+npm run dev
+```
+
+Production build:
+```bash
+npm run build
+npm start
+```
+
+Run tests:
+```bash
+npm test
+```
+
+## API Usage
+
+GET `/movies/:year`
+
+Example request:
+```bash
+# Using curl
+curl http://localhost:3000/movies/2019
+
